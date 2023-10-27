@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TranslatorPage implements OnInit {
 
+  userInput: String = ''
+
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  translateClicked() {
+    console.log(this.userInput)
   }
 
 }
