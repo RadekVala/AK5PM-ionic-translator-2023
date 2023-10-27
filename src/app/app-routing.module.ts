@@ -9,6 +9,14 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'translator',
+    loadChildren: () => import('./translator/translator.module').then( m => m.TranslatorPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
   }
 ];
 @NgModule({
