@@ -29,5 +29,10 @@
   <ion-button (click)="translateClicked()"
   expand="block">Translate</ion-button>
 
+  <ion-card *ngIf="translationOutput$ | async; let output">
+    <ion-card-content>
+      {{ output.responseData.translatedText }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

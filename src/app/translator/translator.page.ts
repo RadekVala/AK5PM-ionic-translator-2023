@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslationAPIService } from '../api/translation-api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-translator',
@@ -8,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class TranslatorPage implements OnInit {
 
   userInput: String = ''
+  translationOutput$: Observable<any> = this.apiService.getTranslation("")
 
-  constructor() { }
+  constructor(private apiService: TranslationAPIService) {
+  }
 
   ngOnInit() {
 
@@ -17,6 +21,7 @@ export class TranslatorPage implements OnInit {
 
   translateClicked() {
     console.log(this.userInput)
+    this.translationOutput$ = this.apiService.getTranslation(this.userInput)
   }
 
 }
