@@ -10,4 +10,10 @@
       <ion-title size="large">history</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ul>
+    <li *ngFor="let history of storedData">
+      {{ history }}
+    </li>
+  </ul>
 </ion-content>
