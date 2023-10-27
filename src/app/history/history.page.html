@@ -1,19 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>history</ion-title>
+    <ion-title>History</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">history</ion-title>
+      <ion-title size="large">Translation history</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ul>
-    <li *ngFor="let history of storedData">
-      {{ history }}
-    </li>
-  </ul>
+  <ion-list>
+    <ion-item  *ngFor="let history of storedData">
+      <ion-label>
+        {{ history }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
